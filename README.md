@@ -5,3 +5,4 @@
 
 for nginx upstream server weight
 
+python setup.py sdist bdist_wheel

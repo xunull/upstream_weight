@@ -21,6 +21,9 @@ class Traffic(BaseModel):
     def values(self):
         return self.__root__.values()
 
+    def data(self):
+        return self.dict()['__root__']
+
     def item_list(self) -> List[TrafficItem]:
         res = []
         for name, value in self.__root__.items():

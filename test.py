@@ -9,7 +9,9 @@ from upstream_weight import (
 
 
 class MyTestCase(unittest.TestCase):
+
     def test_tune_upstream_weight(self):
+        # ratio to weight
         a = Traffic.parse_obj({
             "aws": TrafficItem(ratio=73, count=7),
             "ali": TrafficItem(ratio=27, count=6),
@@ -21,6 +23,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(b.ten.weight, 0)
 
     def test_tune_upstream_ratio(self):
+        # weight to ratio
         a = Traffic.parse_obj({
             "aws": TrafficItem(weight=146, count=7),
             "ali": TrafficItem(weight=63, count=6),
