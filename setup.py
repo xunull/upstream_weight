@@ -1,6 +1,7 @@
 import setuptools
 
 requirements = [
+    'pydantic',
 ]
 
 with open("README.md", "r", encoding='UTF-8') as fh:
@@ -11,7 +12,7 @@ setuptools.setup(
     version="0.0.1",
     author="xunull",
     author_email="xunull@163.com",
-    description="nginx upstream server weight",
+    description="modify nginx upstream server weight",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/xunull/upstream_weight",
